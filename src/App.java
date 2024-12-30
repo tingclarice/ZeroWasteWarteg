@@ -6,12 +6,15 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+// import java.util.Random;
 
 public class App 
 {
     public static Scanner s = new Scanner(System.in);
     public static boolean running = true;
+    public static Random random = new Random();
     
     static ArrayList<QuizData> Quiz = new ArrayList<>(); 
     static ObjectMapper warteg = new ObjectMapper();
@@ -19,30 +22,18 @@ public class App
 
     public static void main(String[] args) throws Exception 
     {
-        if(savePath.exists())
-        {
-            LoadDefinitionJSON();
-            for(int i = 0; i < Quiz.size(); i++)
-            {
-                String question = Quiz.get(i).getQuestion();
-                System.out.println(question);
-
-                String option = Quiz.get(i).getOptions();
-                //System.out.println("The option = " + option);
-
-                String[] options = option.split(":");
-
-                for(int j = 0; j < options.length; j++)
-                {
-                    System.out.println();
-                    System.out.println(options[j]);
-                }
-                String answer = Quiz.get(i).getAnswer();
-                System.out.println("The asnwer = " + answer);
-
-                System.out.println();
-            }
-        }
+        System.out.println("");
+        do {
+            System.out.println("Main Menu:");
+            System.out.println("1. Mulai Game Baru");
+            System.out.println("2. Lanjutkan Game Sebelumnya");
+            System.out.println("3. Penjelasan Game");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih opsi (1/2/3/4): ");
+            int choice = s.nextInt();
+            MainMenu(choice);
+        break;
+        } while (running);
     }
 
 
@@ -55,12 +46,12 @@ public class App
         });
     }
 
-    public static void MainMenu(int jawaban) 
+    public static void MainMenu(int jawaban) throws Exception
     {
         switch (jawaban) 
         {
             case 1:
-
+                MainGame();
                 break;
 
             case 2:
@@ -72,9 +63,57 @@ public class App
                 running = false;
                 break;
 
+            case 4:
+                System.out.println("Pilih opsi (1/2/3/4): ");
+
             default:
                 System.out.println("Pilihan tidak valid! Silakan coba lagi.");
                 break;
+        }
+    }
+
+    public static void MainGame() throws Exception 
+    { 
+        // Dialog
+
+        // Quiz
+        QuizFunction();
+        // Message
+
+    }
+
+    public static void QuizFunction() throws Exception 
+    {
+        if(savePath.exists())
+        {
+            int randomIndex = random.nextInt(10);
+            LoadDefinitionJSON();
+            String question = Quiz.get(randomIndex).getQuestion();
+            System.out.println(question);
+
+            String option = Quiz.get(randomIndex).getOptions();
+            //System.out.println("The option = " + option);
+
+            String[] options = option.split(":");
+
+            for(int j = 0; j < options.length; j++)
+            {
+                System.out.println();
+                System.out.println(options[j]);
+            }
+
+            System.out.print("Input jawaban yang benar : ");
+            String userInput = s.next() + s.nextLine();
+
+            char answer = Quiz.get(randomIndex).getAnswer().toUpperCase().charAt(0);
+            if (userInput.toUpperCase().charAt(0) == answer) {
+                System.out.println("Jawaban benar!");
+            } else {
+                System.out.println("Jawaban salah!");
+            }
+            System.out.println("The asnwer = " + answer);
+
+            System.out.println();
         }
     }
 }
@@ -119,5 +158,18 @@ class QuizData
     public void setAnswer(String answer)
     {
         this.answer = answer;
+    }
+}
+
+class MessageData
+{
+    private String text;
+    public String getText()
+    {
+        return text;
+    }
+    public void setAnswer(String text)
+    {
+        this.text = text;
     }
 }

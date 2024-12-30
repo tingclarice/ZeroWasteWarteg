@@ -1,124 +1,122 @@
-{
-    "message": [
-      {
-        "id": 1,
-        "text": "Bersihkan bumi, mulai dari langkah kecilmu."
-      },
-      {
-        "id": 2,
-        "text": "Sampahmu, tanggung jawabmu."
-      },
-      {
-        "id": 3,
-        "text": "Lingkungan sehat dimulai dari kebiasaan membuang sampah pada tempatnya."
-      },
-      {
-        "id": 4,
-        "text": "Jangan biarkan sampah jadi warisan untuk anak cucu kita."
-      },
-      {
-        "id": 5,
-        "text": "Hijaukan bumi, kurangi plastik."
-      },
-      {
-        "id": 6,
-        "text": "Peduli lingkungan adalah cinta yang nyata untuk bumi."
-      },
-      {
-        "id": 7,
-        "text": "Sampah sedikit, hidup lebih bahagia."
-      },
-      {
-        "id": 8,
-        "text": "Bumi bukan tempat sampah, jagalah ia dengan cinta."
-      },
-      {
-        "id": 9,
-        "text": "Daur ulang sampah, untuk masa depan yang lebih cerah."
-      },
-      {
-        "id": 10,
-        "text": "Hargai bumi seperti kita menghargai rumah sendiri."
-      },
-      {
-        "id": 11,
-        "text": "Kurangi plastik, mulai dari sekarang."
-      },
-      {
-        "id": 12,
-        "text": "Lingkungan bersih adalah warisan terbaik untuk generasi mendatang."
-      },
-      {
-        "id": 13,
-        "text": "Bersama kita bisa melawan polusi sampah."
-      },
-      {
-        "id": 14,
-        "text": "Jangan biarkan plastik mendominasi lautan kita."
-      },
-      {
-        "id": 15,
-        "text": "Sampah kecil yang dibuang sembarangan bisa berdampak besar."
-      },
-      {
-        "id": 16,
-        "text": "Mulai dari diri sendiri untuk menjaga kebersihan lingkungan."
-      },
-      {
-        "id": 17,
-        "text": "Satu langkah kecilmu untuk mengelola sampah, berarti besar bagi bumi."
-      },
-      {
-        "id": 18,
-        "text": "Hidup ramah lingkungan, hidup lebih tenang."
-      },
-      {
-        "id": 19,
-        "text": "Kreatiflah dengan daur ulang, bukan membuang sembarangan."
-      },
-      {
-        "id": 20,
-        "text": "Sampah bukan masalah jika kita peduli mengelolanya."
-      },
-      {
-        "id": 21,
-        "text": "Kurangi sampah hari ini untuk masa depan yang lebih baik."
-      },
-      {
-        "id": 22,
-        "text": "Bersihkan sekitarmu, cerahkan harimu."
-      },
-      {
-        "id": 23,
-        "text": "Jaga bumi, mulailah dari memilah sampah."
-      },
-      {
-        "id": 24,
-        "text": "Dengan membuang sampah pada tempatnya, kita menghormati alam."
-      },
-      {
-        "id": 25,
-        "text": "Sampah adalah tanggung jawab bersama."
-      },
-      {
-        "id": 26,
-        "text": "Kebersihan lingkungan mencerminkan kepribadian kita."
-      },
-      {
-        "id": 27,
-        "text": "Lindungi bumi, rawat dengan tindakan kecil setiap hari."
-      },
-      {
-        "id": 28,
-        "text": "Plastik bisa bertahan ratusan tahun, tapi bumi bisa musnah lebih cepat."
-      },
-      {
-        "id": 29,
-        "text": "Lingkungan bersih, hidup jadi lebih asri."
-      },
-      {
-        "id": 30,
-        "text": "Bumi memerlukan pahlawan, jadilah salah satunya dengan mengelola sampah."
-      }
-    ]
+[
+  {
+    "id": 1,
+    "text": "Bersihkan bumi, mulai dari langkah kecilmu."
+  },
+  {
+    "id": 2,
+    "text": "Sampahmu, tanggung jawabmu."
+  },
+  {
+    "id": 3,
+    "text": "Lingkungan sehat dimulai dari kebiasaan membuang sampah pada tempatnya."
+  },
+  {
+    "id": 4,
+    "text": "Jangan biarkan sampah jadi warisan untuk anak cucu kita."
+  },
+  {
+    "id": 5,
+    "text": "Hijaukan bumi, kurangi plastik."
+  },
+  {
+    "id": 6,
+    "text": "Peduli lingkungan adalah cinta yang nyata untuk bumi."
+  },
+  {
+    "id": 7,
+    "text": "Sampah sedikit, hidup lebih bahagia."
+  },
+  {
+    "id": 8,
+    "text": "Bumi bukan tempat sampah, jagalah ia dengan cinta."
+  },
+  {
+    "id": 9,
+    "text": "Daur ulang sampah, untuk masa depan yang lebih cerah."
+  },
+  {
+    "id": 10,
+    "text": "Hargai bumi seperti kita menghargai rumah sendiri."
+  },
+  {
+    "id": 11,
+    "text": "Kurangi plastik, mulai dari sekarang."
+  },
+  {
+    "id": 12,
+    "text": "Lingkungan bersih adalah warisan terbaik untuk generasi mendatang."
+  },
+  {
+    "id": 13,
+    "text": "Bersama kita bisa melawan polusi sampah."
+  },
+  {
+    "id": 14,
+    "text": "Jangan biarkan plastik mendominasi lautan kita."
+  },
+  {
+    "id": 15,
+    "text": "Sampah kecil yang dibuang sembarangan bisa berdampak besar."
+  },
+  {
+    "id": 16,
+    "text": "Mulai dari diri sendiri untuk menjaga kebersihan lingkungan."
+  },
+  {
+    "id": 17,
+    "text": "Satu langkah kecilmu untuk mengelola sampah, berarti besar bagi bumi."
+  },
+  {
+    "id": 18,
+    "text": "Hidup ramah lingkungan, hidup lebih tenang."
+  },
+  {
+    "id": 19,
+    "text": "Kreatiflah dengan daur ulang, bukan membuang sembarangan."
+  },
+  {
+    "id": 20,
+    "text": "Sampah bukan masalah jika kita peduli mengelolanya."
+  },
+  {
+    "id": 21,
+    "text": "Kurangi sampah hari ini untuk masa depan yang lebih baik."
+  },
+  {
+    "id": 22,
+    "text": "Bersihkan sekitarmu, cerahkan harimu."
+  },
+  {
+    "id": 23,
+    "text": "Jaga bumi, mulailah dari memilah sampah."
+  },
+  {
+    "id": 24,
+    "text": "Dengan membuang sampah pada tempatnya, kita menghormati alam."
+  },
+  {
+    "id": 25,
+    "text": "Sampah adalah tanggung jawab bersama."
+  },
+  {
+    "id": 26,
+    "text": "Kebersihan lingkungan mencerminkan kepribadian kita."
+  },
+  {
+    "id": 27,
+    "text": "Lindungi bumi, rawat dengan tindakan kecil setiap hari."
+  },
+  {
+    "id": 28,
+    "text": "Plastik bisa bertahan ratusan tahun, tapi bumi bisa musnah lebih cepat."
+  },
+  {
+    "id": 29,
+    "text": "Lingkungan bersih, hidup jadi lebih asri."
+  },
+  {
+    "id": 30,
+    "text": "Bumi memerlukan pahlawan, jadilah salah satunya dengan mengelola sampah."
   }
+]
