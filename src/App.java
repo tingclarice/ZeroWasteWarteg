@@ -16,7 +16,6 @@ public class App
     public static boolean running = true;
     public static Random random = new Random();
     
-    static ArrayList<MessageData> Message = new ArrayList<>();
     static ArrayList<QuizData> Quiz = new ArrayList<>(); 
     static ObjectMapper warteg = new ObjectMapper();
     static File savePath = new File("src/quiz.json");
@@ -28,8 +27,9 @@ public class App
             System.out.println("Main Menu:");
             System.out.println("1. Mulai Game Baru");
             System.out.println("2. Lanjutkan Game Sebelumnya");
-            System.out.println("3. Keluar");
-            System.out.print("Pilih opsi (1/2/3): ");
+            System.out.println("3. Penjelasan Game");
+            System.out.println("4. Keluar");
+            System.out.print("Pilih opsi (1/2/3/4): ");
             int choice = s.nextInt();
             MainMenu(choice);
         break;
@@ -43,12 +43,6 @@ public class App
         QuizList.forEach(e ->
         {
             Quiz.add(e);
-        });
-
-        List<MessageData> MessageList = warteg.readValue(savePath, new TypeReference<List<MessageData>>() {});
-        MessageList.forEach(e ->
-        {
-            Message.add(e);
         });
     }
 
@@ -70,7 +64,7 @@ public class App
                 break;
 
             case 4:
-                System.out.println("Pilih opsi (1/2/3): ");
+                System.out.println("Pilih opsi (1/2/3/4): ");
 
             default:
                 System.out.println("Pilihan tidak valid! Silakan coba lagi.");
@@ -81,7 +75,7 @@ public class App
     public static void MainGame() throws Exception 
     { 
         // Dialog
-        Penjelasan();
+
         // Quiz
         QuizFunction();
         // Message
@@ -120,30 +114,7 @@ public class App
             System.out.println("The asnwer = " + answer);
 
             System.out.println();
-
         }
-    }
-
-    public static void Message() throws Exception 
-    {
-        if(savePath.exists())
-        {
-            int randomIndex = random.nextInt(10);
-            LoadDefinitionJSON();
-            String text = Message.get(randomIndex).getText();
-            System.out.println(text);
-        }
-    }
-
-    public static void Penjelasan () {
-        System.out.println("Dunia sedang menghadapi krisis limbah. Setiap hari, jutaan ton sampah terbuang sia-sia, mencemari bumi dan merusak ekosistem. Namun, di tengah kekacauan ini, ada harapan...");
-        System.out.println("Selamat datang di Zero Waste Warteg! Di sini, kami percaya bahwa setiap langkah kecil bisa membawa perubahan besar. Tapi mengelola warteg yang ramah lingkungan bukanlah hal mudah... Kami membutuhkan bantuanmu untuk menyajikan makanan lezat sambil menjaga bumi tetap sehat!");
-        System.out.println("Tugasmu adalah melayani pelanggan yang datang dengan cepat dan tepat. Namun, di sini ada tantangan: setiap pesanan hanya bisa disajikan jika kamu berhasil menjawab pertanyaan tentang pengelolaan limbah. Jangan khawatir, aku akan membimbingmu");
-        System.out.println("Cara Bermain : ");
-        System.out.println("1. Pelanggan akan memesan.");
-        System.out.println("2. Jawab kuis terkait zero waste untuk menyelesaikan pesanan.");
-        System.out.println("3. Jawaban yang benar = pesanan disajikan. Jawaban salah = pesanan gagal.");
-        System.out.println("4. Tujuanmu: Jawab kuis dengan benar agar dapat meningkatkan pengetahuan menjaga lingkungan!");
     }
 }
 
@@ -202,4 +173,3 @@ class MessageData
         this.text = text;
     }
 }
-
