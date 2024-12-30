@@ -6,7 +6,13 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         do {
-            MainMenu(1);
+            System.out.println("============ SELAMAT DATANG KE ZERO-WASTE WARTEG ============");
+            System.out.println("1. Mulai Game Baru");
+            System.out.println("2. Lanjutkan Game Sebelumnya");
+            System.out.println("3. Keluar");
+            System.out.print("Input Opsi = ");
+            int jawaban = s.nextInt();
+            MainMenu(jawaban);
             break;
         } while (true);
 
@@ -14,12 +20,9 @@ public class App {
     }
 
     public static void MainMenu(int jawaban) {
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-
         switch (jawaban) {
             case 1:
+
                 break;
 
             case 2:
