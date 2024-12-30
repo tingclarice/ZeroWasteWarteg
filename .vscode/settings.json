@@ -2,6 +2,9 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "c:\\Users\\clari\\Downloads\\jackson-databind-2.18.2.jar",
+        "c:\\Users\\clari\\Downloads\\jackson-core-2.18.2.jar",
+        "c:\\Users\\clari\\Downloads\\jackson-annotations-2.18.2.jar"
     ]
 }
