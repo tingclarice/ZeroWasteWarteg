@@ -15,7 +15,7 @@ public class App
     
     static ArrayList<QuizData> Quiz = new ArrayList<>(); 
     static ObjectMapper warteg = new ObjectMapper();
-    static File savePath = new File("D:\\Sekolah\\Alrpo\\HelpFren\\ZeroWasteWarteg\\src\\quiz.json");
+    static File savePath = new File("src/quiz.json");
 
     public static void main(String[] args) throws Exception 
     {
@@ -25,7 +25,7 @@ public class App
             for(int i = 0; i < Quiz.size(); i++)
             {
                 String question = Quiz.get(i).getQuestion();
-                System.out.println("The Vocab : " + question);
+                System.out.println(question);
 
                 String option = Quiz.get(i).getOptions();
                 //System.out.println("The option = " + option);
