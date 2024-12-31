@@ -18,7 +18,10 @@ public class App
     
     static ArrayList<QuizData> Quiz = new ArrayList<>(); 
     static ObjectMapper warteg = new ObjectMapper();
-    static File savePath = new File("src/quiz.json");
+    static File quizSavePath = new File("src/quiz.json");
+
+    static ArrayList<MessageData> Message = new ArrayList<>(); 
+    static File messageSavePath = new File("src/message.json");
 
     public static void main(String[] args) throws Exception 
     {
@@ -36,13 +39,21 @@ public class App
         } while (running);
     }
 
-
-    public static void LoadDefinitionJSON() throws IOException
+    public static void LoadQuizJSON() throws IOException
     {
-        List<QuizData> QuizList = warteg.readValue(savePath, new TypeReference<List<QuizData>>() {});
+        List<QuizData> QuizList = warteg.readValue(quizSavePath, new TypeReference<List<QuizData>>() {});
         QuizList.forEach(e ->
         {
             Quiz.add(e);
+        });
+    }
+
+    public static void LoadMessageJSON() throws IOException
+    {
+        List<MessageData> MessageList = warteg.readValue(messageSavePath, new TypeReference<List<MessageData>>() {});
+        MessageList.forEach(e ->
+        {
+            Message.add(e);
         });
     }
 
@@ -79,15 +90,28 @@ public class App
         // Quiz
         QuizFunction();
         // Message
+        MessageFunction();
+    }
 
+    public static void MessageFunction() throws Exception 
+    {
+        if(messageSavePath.exists())
+        {
+            int randomIndex = random.nextInt(10);
+            LoadMessageJSON();
+            String message = Message.get(randomIndex).getText();
+            System.out.println(message);
+
+            System.out.println();
+        }
     }
 
     public static void QuizFunction() throws Exception 
     {
-        if(savePath.exists())
+        if(quizSavePath.exists())
         {
             int randomIndex = random.nextInt(10);
-            LoadDefinitionJSON();
+            LoadQuizJSON();
             String question = Quiz.get(randomIndex).getQuestion();
             System.out.println(question);
 
@@ -163,12 +187,22 @@ class QuizData
 
 class MessageData
 {
+    private int id;
     private String text;
+
+    public int getID()
+    {
+        return id;
+    }
+    public void setID(String text)
+    {
+        this.id = id;
+    }
     public String getText()
     {
         return text;
     }
-    public void setAnswer(String text)
+    public void setText(String text)
     {
         this.text = text;
     }
